@@ -3,7 +3,7 @@ package jsonapi
 import (
 	"testing"
 
-	"github.com/DataDog/jsonapi/internal/is"
+	"github.com/leg100/jsonapi/internal/is"
 )
 
 func TestIsValidMemberName(t *testing.T) {

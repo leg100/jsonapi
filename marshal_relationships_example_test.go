@@ -3,7 +3,7 @@ package jsonapi_test
 import (
 	"fmt"
 
-	"github.com/DataDog/jsonapi"
+	"github.com/leg100/jsonapi"
 )
 
 type Author struct {
