@@ -94,7 +94,9 @@ var (
 	}
 
 	// article bodies
-	emptyBody                         = `{"data":[]}`
+	nullDataBody                      = `{"data":null}`
+	emptySingleBody                   = `{"data":{}}`
+	emptyManyBody                     = `{"data":[]}`
 	articleABody                      = `{"data":{"type":"articles","id":"1","attributes":{"title":"A"}}}`
 	articleANoIDBody                  = `{"data":{"type":"articles","attributes":{"title":"A"}}}`
 	articleAInvalidTypeBody           = `{"data":{"type":"not-articles","id":"1","attributes":{"title":"A"}}}`
@@ -109,6 +111,7 @@ var (
 	articleEmbeddedBody               = `{"data":{"type":"articles","id":"1","attributes":{"title":"A","lastModified":"1989-06-15T00:00:00Z"}}}`
 
 	// articles with relationships bodies
+	articleRelatedInvalidEmptyRelationshipBody  = `{"data":{"id":"1","type":"articles","attributes":{"title":"A"},"relationships":{"author":{}}}}`
 	articleRelatedNoOmitEmptyBody               = `{"data":{"id":"1","type":"articles","attributes":{"title":"A"},"relationships":{"author":{"data":null},"comments":{"data":[]}}}}`
 	articleRelatedAuthorBody                    = `{"data":{"id":"1","type":"articles","attributes":{"title":"A"},"relationships":{"author":{"data":{"id":"1","type":"author"},"links":{"self":"http://example.com/articles/1/relationships/author","related":"http://example.com/articles/1/author"}}}}}`
 	articleRelatedAuthorTwiceBody               = `{"data":[{"id":"1","type":"articles","attributes":{"title":"A"},"relationships":{"author":{"data":{"id":"1","type":"author"}}}},{"id":"2","type":"articles","attributes":{"title":"B"},"relationships":{"author":{"data":{"id":"1","type":"author"}}}}]}`

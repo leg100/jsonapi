@@ -24,12 +24,12 @@ func TestMarshal(t *testing.T) {
 		{
 			description: "nil",
 			given:       nil,
-			expect:      `{"data":null}`,
+			expect:      nullDataBody,
 			expectError: nil,
 		}, {
 			description: "Article (empty)",
 			given:       Article{},
-			expect:      `{"data":null}`,
+			expect:      nullDataBody,
 			expectError: nil,
 		}, {
 			description: "*Article (empty)",
@@ -44,7 +44,7 @@ func TestMarshal(t *testing.T) {
 		}, {
 			description: "[]*Article (empty)",
 			given:       make([]*Article, 0),
-			expect:      emptyBody,
+			expect:      emptyManyBody,
 			expectError: nil,
 		}, {
 			description: "Article (missing ID)",
