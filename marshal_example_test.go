@@ -3,7 +3,7 @@ package jsonapi_test
 import (
 	"fmt"
 
-	"github.com/leg100/jsonapi"
+	"github.com/DataDog/jsonapi"
 )
 
 func ExampleMarshal() {

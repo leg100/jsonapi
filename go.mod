@@ -1,3 +1,3 @@
-module github.com/leg100/jsonapi
+module github.com/DataDog/jsonapi
 
 go 1.18

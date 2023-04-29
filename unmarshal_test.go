@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/leg100/jsonapi/internal/is"
+	"github.com/DataDog/jsonapi/internal/is"
 )
 
 func TestUnmarshal(t *testing.T) {
